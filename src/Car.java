@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-public class Car extends Transport{
+public class Car extends Transport {
     private double engineVolume;
     private String transmission;
     private String bodyType;
@@ -29,9 +29,9 @@ public class Car extends Transport{
             }
             if (keylessEntry == null || keylessEntry.isEmpty() || keylessEntry.isBlank()) {
                 this.keylessEntry = "default";
-            } else  if (LocalDate.now().getMonthValue() < 3 || LocalDate.now().getMonthValue() > 11){
+            } else if (LocalDate.now().getMonthValue() < 3 || LocalDate.now().getMonthValue() > 11) {
                 this.keylessEntry = "Удаленный запуск двигателя";
-            }else {
+            } else {
                 this.keylessEntry = "Удаленная остановка двигателя";
             }
         }
@@ -43,12 +43,11 @@ public class Car extends Transport{
         public String getKeylessEntry() {
             return keylessEntry;
         }
-
     }
 
     public Car(String brand, String model, String productionCountry, double engineVolume, int productionYear, String color,
-               String transmission, String bodyType, String registrationNumber, String numberOfSeats, String tireType, Key option,double maxSpeed) {
-        super (brand,model,color,productionYear,productionCountry,maxSpeed);
+               String transmission, String bodyType, String registrationNumber, String numberOfSeats, String tireType, Key option, double maxSpeed) {
+        super(brand, model, color, productionYear, productionCountry, maxSpeed);
 
         if (engineVolume <= 0) {
             this.engineVolume = 1.5;
@@ -116,7 +115,7 @@ public class Car extends Transport{
     @Override
     public String toString() {
         return " Автомобиль {" +
-        " бренд '" + getBrand() + '\'' +
+                " бренд '" + getBrand() + '\'' +
                 ", модель '" + getModel() + '\'' +
                 ", цвет'" + getColor() + '\'' +
                 ", год производства " + getProductionYear() +

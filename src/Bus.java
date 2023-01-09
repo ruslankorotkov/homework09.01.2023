@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-public class Bus extends Transport{
+public class Bus extends Transport {
     private double engineVolume;
     private String transmission;
     private String bodyType;
@@ -9,8 +9,8 @@ public class Bus extends Transport{
     private String tireType;
 
     public Bus(String brand, String model, String productionCountry, double engineVolume, int productionYear, String color,
-               String transmission, String bodyType, String registrationNumber, String numberOfSeats, String tireType,double maxSpeed) {
-        super (brand,model,color,productionYear,productionCountry,maxSpeed);
+               String transmission, String bodyType, String registrationNumber, String numberOfSeats, String tireType, double maxSpeed) {
+        super(brand, model, color, productionYear, productionCountry, maxSpeed);
 
         if (engineVolume <= 0) {
             this.engineVolume = 1.5;
@@ -60,7 +60,6 @@ public class Bus extends Transport{
     public String getNumberOfSeats() {
         return numberOfSeats;
     }
-
 
     public void setTireType(String tireType) {
         this.tireType = tireType;

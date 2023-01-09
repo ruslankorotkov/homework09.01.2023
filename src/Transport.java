@@ -5,6 +5,7 @@ public class Transport {
     private final int productionYear;
     private final String productionCountry;
     private double maxSpeed;
+
     public Transport(String brand, String model, String color, int productionYear, String productionCountry, double maxSpeed) {
         if (brand == null || brand.isEmpty() || brand.isBlank()) {
             this.brand = "default";
@@ -33,6 +34,7 @@ public class Transport {
         }
         this.maxSpeed = maxSpeed;
     }
+
     public String getBrand() {
         return brand;
     }
