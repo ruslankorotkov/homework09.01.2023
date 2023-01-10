@@ -1,4 +1,4 @@
-public class Transport {
+public abstract class Transport {
     private String brand;
     private String model;
     private String color;
@@ -32,7 +32,7 @@ public class Transport {
         } else {
             this.color = color;
         }
-        this.maxSpeed = maxSpeed;
+        this.maxSpeed = Math.abs(maxSpeed);
     }
 
     public String getBrand() {
@@ -73,5 +73,17 @@ public class Transport {
 
     public void setMaxSpeed(double maxSpeed) {
         this.maxSpeed = maxSpeed;
+    }
+
+    @Override
+    public String toString() {
+        return " Транспорт {" +
+                " бренд '" + brand + '\'' +
+                ", модель '" + model + '\'' +
+                ", цвет '" + color + '\'' +
+                ", год производства " + productionYear +
+                ", страна производства '" + productionCountry + '\'' +
+                ", максимальная скорость " + maxSpeed +
+                '}';
     }
 }

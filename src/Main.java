@@ -6,9 +6,9 @@ public class Main {
         Car bmv = new Car("BMW", "Z8", " Германия", 3.0, 2021, "черный", "механика", "минивэн", "в4веее", "3", "", key, 134);
         Car kia = new Car("Kia", "Sportage 4-го поколения", " Южная Корея", 2.4, 2018, "красный", "механика", "хэтчбек", "ев4ев4в4", "4", "", key, 122);
         Car hyundai = new Car("Hyundai", "Avante", " Южная Корея", 1.6, 2016, "оранжевый", "автоматика", "кроссовер", "ве4еву", "4", "", key, 122);
-        Bus ural = new Bus("Урал", "Next", " Россия", 6.65, 2022, "оранжевый", "механика 6X6", "вахтовый автобус", "ef", "22", "", 106);
-        Bus paz = new Bus(" Паз", "Вектор Next", " Россия", 4.43, 2020, "металлик", "механика 4х2", "автобус малого класса", "gd", "26", "", 100);
-        Bus мercedes = new Bus("Mercedes-Benz", "Tourismo", "Германия", 10.667, 2021, "металлик", "механика 6х2", "автобус туристического класса", "gr", "52", "", 101);
+        Bus ural = new Bus("Урал", "Next", "оранжевый", 2022, " Россия", 106);
+        Bus paz = new Bus(" Паз", "Вектор Next", "металлик", 2020, " Россия", 100);
+        Bus мercedes = new Bus("Mercedes-Benz", "Tourismo", "металлик", 2021, "Германия", 101);
         System.out.println(lada);
         System.out.println(audi);
         System.out.println(bmv);
@@ -17,5 +17,6 @@ public class Main {
         System.out.println(ural);
         System.out.println(paz);
         System.out.println(мercedes);
+
     }
 }

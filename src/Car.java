@@ -129,6 +129,7 @@ public class Car extends Transport {
                 ", покрышки '" + tireType + '\'' +
                 ", опции " + option +
                 '}';
+
     }
 }
 
