@@ -1,10 +1,11 @@
-public class Transport {
+public abstract class Transport {
     private String brand;
     private String model;
     private String color;
     private final int productionYear;
     private final String productionCountry;
     private double maxSpeed;
+
     public Transport(String brand, String model, String color, int productionYear, String productionCountry, double maxSpeed) {
         if (brand == null || brand.isEmpty() || brand.isBlank()) {
             this.brand = "default";
@@ -31,8 +32,9 @@ public class Transport {
         } else {
             this.color = color;
         }
-        this.maxSpeed = maxSpeed;
+        this.maxSpeed = Math.abs(maxSpeed);
     }
+
     public String getBrand() {
         return brand;
     }
@@ -71,5 +73,17 @@ public class Transport {
 
     public void setMaxSpeed(double maxSpeed) {
         this.maxSpeed = maxSpeed;
+    }
+
+    @Override
+    public String toString() {
+        return " Транспорт {" +
+                " бренд '" + brand + '\'' +
+                ", модель '" + model + '\'' +
+                ", цвет '" + color + '\'' +
+                ", год производства " + productionYear +
+                ", страна производства '" + productionCountry + '\'' +
+                ", максимальная скорость " + maxSpeed +
+                '}';
     }
 }
